@@ -1,0 +1,41 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap"); */
+
+body {
+  background-color: slategray;
+  color: cornflowerblue;
+}
+/* body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+
+} */
+a {
+  color: #000;
+}
+h1 {
+  color: cadetblue;
+}
+h2 {
+  color: cadetblue;
+}
+h3 {
+  color: cadetblue;
+}
+h4 {
+  color: cadetblue;
+}
+h5 {
+  color: cadetblue;
+}
+h6 {
+  color: cadetblue;
+}
+
+link {
+  color: slategray;
+}
