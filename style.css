@@ -1,5 +1,14 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap"); */
 
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Libre+Barcode+39&family=Libre+Barcode+39+Extended+Text&display=swap");
+/**
+    font-family: 'Libre Barcode 128 Text', cursive;
+
+    font-family: 'Libre Barcode 39', cursive;
+
+    font-family: 'Libre Barcode 39 Extended Text', cursive;
+*/
+
 body {
   background-color: slategray;
   color: cornflowerblue;
@@ -14,8 +23,26 @@ h6,
 p {
 
 } */
+
+.grid_container {
+  display: grid;
+}
+.inline_grid_container {
+  display: -ms-inline-grid;
+}
+.a_hover_barcode {
+  color: #000;
+  font-family: "Libre Barcode 39", cursive;
+  font-size: 40px;
+}
+/* .audio_hover{
+  
+} */
 a {
   color: #000;
+  /* font-family: "Libre Barcode 39 Extended Text", cursive; */
+  font-family: "Libre Barcode 128 Text", cursive;
+  font-size: 40px;
 }
 h1 {
   color: cadetblue;
