@@ -5,7 +5,13 @@
  * 
  */
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------
+/**
+ * getter/setter stuff
+ */
 
+function CheckForValue(item) {
+  return sessionStorage.getItem(item);
+}
 /*
  * https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission
  * 
@@ -42,3 +48,16 @@ var EndSoundOnHover = function StopLoopOnHover(audio) {
   this_audio.currentTime() = 0;
 }
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------
+function AddSessionStorage(itemName, item) {
+  sessionStorage.setItem(itemName, item);
+}
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------
+// text-specific stuff
+function StrikeText(elem_id) {
+  // var el = document.querySelector(".strike_target");
+  document.getElementById(elem_id).style.setProperty('text-decoration', 'line-through');
+}
+
+var st = function () {
+  alert(this.name);
+}
