@@ -61,3 +61,21 @@ function StrikeText(elem_id) {
 var st = function () {
   alert(this.name);
 }
+
+// swiped from https://stackoverflow.com/questions/1038746/equivalent-of-string-format-in-jquery/2648463#2648463
+// t's just easier for format stuff this way
+var format = function (str, col) {
+  col = typeof col === 'object' ? col : Array.prototype.slice.call(arguments, 1);
+
+  return str.replace(/\{\{|\}\}|\{(\w+)\}/g, function (m, n) {
+      if (m == "{{") { return "{"; }
+      if (m == "}}") { return "}"; }
+      return col[n];
+  });
+};
+
+function newMessage(message_marker_elem_id, user, message) {
+  var end_mark = document.getElementById(message_marker_elem_id);
+  var msg = format("");
+}
+
