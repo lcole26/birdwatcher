@@ -11,6 +11,14 @@
 input[id="cb"] {
   display: none;
 }
+:root {
+  --sms_text_left_padding_offset: 0.6vw;
+  --sms_text_bottom_padding_offset: 0.3vw;
+  --sms_text_top_padding_offset: 0.3vw;
+  --sms_border_radius: 1rem;
+  --link_font_size: 2.5rem;
+  --outline_offset: 0.2rem;
+}
 body {
   background-color: rgb(112, 128, 144);
   /* color: cornflowerblue; */
@@ -19,16 +27,6 @@ body {
   /* 62.5% of the base size of 16px = 10px.*/
   /* font-size: 62.5%; */
 }
-/* body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  
-} */
 
 .strike_target {
   background-color: slategray;
@@ -43,19 +41,29 @@ p {
 .inline_grid_container {
   display: -ms-inline-grid;
 }
-.a_hover_barcode {
-  color: #000;
-  font-family: "Libre Barcode 39", cursive;
-  /* font-size: 40px; */
-  font-size: 2.5rem;
-}
 
 a {
   color: #000;
   /* font-family: "Libre Barcode 39 Extended Text", cursive; */
   font-family: "Libre Barcode 128 Text", cursive;
   /* font-size: 40px; */
-  font-size: 2.5rem;
+  font-size: var(--link_font_size);
+}
+
+.a_barcode_font_nolink {
+  color: #000;
+  /* font-family: "Libre Barcode 39 Extended Text", cursive; */
+  font-family: "Libre Barcode 128 Text", cursive;
+  /* font-size: 40px; */
+  font-size: var(--link_font_size);
+}
+
+.unknown_entity {
+  color: #000;
+  /* font-family: "Libre Barcode 39 Extended Text", cursive; */
+  font-family: "Libre Barcode 128 Text", cursive;
+  /* font-size: 40px; */
+  font-size: var(--link_font_size);
 }
 h1 {
   /* color: cadetblue; */
@@ -87,26 +95,95 @@ link {
   color: slategray;
 }
 
-.user_mog {
-  color: #000;
-}
-
 .user_klause {
   color: #020c6d;
   background-color: #99b0b5;
+  outline-offset: var(--outline_offset);
+  border-radius: var(--sms_border_radius);
+  padding-left: var(--sms_text_left_padding_offset);
+  padding-bottom: var(--sms_text_bottom_padding_offset);
+  padding-top: var(--sms_text_top_padding_offset);
+}
+.user_klause_img {
+  /* box-shadow: 0 0 3pt 3pt #020c6d; */
+  border: 0.4rem double #020c6d;
+  border-radius: 1rem;
+}
+
+.user_klause::after {
+  content: url("");
 }
 
 .user_boma {
   color: #541581;
   background-color: #c0a7bd;
+  outline-offset: var(--outline_offset);
+  border-radius: var(--sms_border_radius);
+  padding-left: var(--sms_text_left_padding_offset);
+  padding-bottom: var(--sms_text_bottom_padding_offset);
+  padding-top: var(--sms_text_top_padding_offset);
+}
+
+.user_boma_img {
+  border: 0.4rem double #541581;
+  border-radius: 1rem;
 }
 
 .user_secondwind {
   color: #d8e079;
   background-color: #0c5f52;
+  outline-offset: var(--outline_offset);
+  padding-left: var(--sms_text_left_padding_offset);
+  padding-bottom: var(--sms_text_bottom_padding_offset);
+  padding-top: var(--sms_text_top_padding_offset);
+  border-radius: var(--sms_border_radius);
+  /* box-shadow: 0 0 3pt 2pt #0c5f52; */
+}
+
+.user_secondwind_img {
+  border: 0.4rem double #d8e079;
+  border-radius: 1rem;
 }
 
 .user_harakiri_salaryman {
   color: #204350;
   background-color: #bde976;
+  /* background-position: 0.4rem; */
+  /* outline-style: ridge;
+  /* outline-color: #204350; */
+  outline-offset: var(--outline_offset);
+  border-radius: var(--sms_border_radius);
+  padding-left: var(--sms_text_left_padding_offset);
+  padding-bottom: var(--sms_text_bottom_padding_offset);
+  padding-top: var(--sms_text_top_padding_offset);
+  /* padding: ; */
 }
+
+.user_harakiri_salaryman_img {
+  border: 0.4rem double #204350;
+  border-radius: 1rem;
+}
+.user_harakiri_salaryman_link {
+  padding-left: var(--sms_text_left_padding_offset);
+  padding-bottom: var(--sms_text_bottom_padding_offset);
+  padding-top: var(--sms_text_top_padding_offset);
+}
+
+.user_mog {
+  /* color: #000; */
+  color: #376a4c;
+  background-color: #caddd8;
+  outline-offset: var(--outline_offset);
+  border-radius: var(--sms_border_radius);
+  padding-left: var(--sms_text_left_padding_offset);
+  padding-bottom: var(--sms_text_bottom_padding_offset);
+  padding-top: var(--sms_text_top_padding_offset);
+}
+.user_mog_img {
+  border: 0.4rem double #000;
+  border-radius: 1rem;
+}
+
+/* img {
+  border: 1rem solid #000;
+} */
