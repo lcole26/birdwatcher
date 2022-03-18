@@ -12,14 +12,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="/node_modules/howler/src/howler.core.js"></script>
-    <!-- <script type="module" src="/js_stuff/main.js"></script> -->
-    <!-- <script src="/js_stuff/main.js"></script> -->
+    <script src="../node_modules/howler/src/howler.core.js"></script>
+    <script src="../js_stuff/main.js"></script>
   </head>
   <body>
+    <script>
+      var sound = SetUpMsgReceivedAudio();
+    </script>
+
     <!-- <base href="." /> -->
     <p id="message_start">+++</p>
-    <script id="sound0">
+    <!-- <script id="sound0">
       var sound = new Howl({
         src: [
           // "media/audio/Serial Experiments Lain - Powerline Noise.mp3",
@@ -28,7 +31,7 @@
         volume: 0.5,
         html5: true,
       });
-    </script>
+    </script> -->
     <script>
       // var f = document.getElementById("sound0");
       sound.play();

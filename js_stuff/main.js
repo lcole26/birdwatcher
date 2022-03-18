@@ -53,8 +53,14 @@ function getLocalStream() {
 }
 
 var SetUpMsgReceivedAudio = function () {
-  // msgReceivedAudio = new audio
-  // var sms_chirp = new Howl
+  return new Howl({
+    src: [
+      // "media/audio/Serial Experiments Lain - Powerline Noise.mp3",
+      "../media/audio/545372__stwime__up3.ogg",
+    ],
+    volume: 0.5,
+    html5: true,
+  });
 };
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -76,6 +82,8 @@ function StrikeText(elem_id) {
     .style.setProperty("text-decoration", "line-through");
 }
 
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------
+//story messaging stuff
 /**
  *
  * @param {*} str
@@ -105,20 +113,30 @@ var format = function (str, col) {
 
 var newMessage = function (
   message_marker_elem_id,
-  user,
+  user_class,
   message_id,
   msg_end_marker,
-  time_offset
+  time_offset,
+  msg_sound
 ) {
-  var end_mark = document.getElementById(message_marker_elem_id);
-  var user_msg = document.getElementById(user_msg);
-  var msg = format(sms_msg_format, {
+  // let end_mark = document.getElementById(message_marker_elem_id);
+  // let user_msg = document.getElementById(user_msg);
+  let msg = format(sms_msg_format, {
     username: user,
     msg: user_msg,
     msg_end_marker: msg_end_marker,
   });
+
+  let new_paragraph_obj = document.createElement("p");
+  if (message_id != null) {
+    new_paragraph_obj.setAttribute("id", message_id);
+  }
+  new_paragraph_obj.setAttribute("class", user_class);
+  let new_text_node_obj = document.createTextNode(user_msg);
+  let f = document.crea;
+
   setTimeout(() => {
-    end_mark.innerHTML += user_msg;
+    // end_mark.innerHTML += user_msg;
   }, time_offset);
 };
 
