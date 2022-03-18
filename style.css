@@ -19,6 +19,7 @@ input[id="cb"] {
   --link_font_size: 2.5rem;
   --outline_offset: 0.2rem;
 }
+
 body {
   background-color: rgb(112, 128, 144);
   /* color: cornflowerblue; */
