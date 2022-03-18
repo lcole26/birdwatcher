@@ -123,4 +123,4 @@ function lol() {
   document.write("lmao2");
 }
 
-export { format, newMessage, newMessageWithLink, lol };
+// export { format, newMessage, newMessageWithLink, lol };
