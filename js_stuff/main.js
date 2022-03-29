@@ -41,6 +41,9 @@ const users = {
   harakiri_salaryman: "user_harakiri_salaryman",
   mog: "user_mog",
   unknown_entity: "user_unknown_entity",
+
+  // various
+  a_barcode_font_nolink: "a_barcode_font_nolink"
 };
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------

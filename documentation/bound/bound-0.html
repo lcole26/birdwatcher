@@ -7,62 +7,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bound_0</title>
   <link rel="stylesheet" href="../../css/style.css" />
+  <script src="../../js_stuff/main.js"></script>
+  <script src="../../node_modules/howler/src/howler.core.js"></script>
+  <base href="../../">
 </head>
 
 <body>
   <h1>Birds are dying in the United States and no one knows why</h1>
-  <p class="user_secondwind">
+
+  <script>
+    var sound = SetUpMsgReceivedAudio();
+    var _users = users;
+    postNewMessageWithHTML(users.secondwind, null, 1, `
+    <a class="user_secondwind"
+    href="https://ktar.com/story/4948388/bird-flu-case-found-in-southern-wisconsin-chicken-flock/" target="_blank"
+      rel="noopener noreferrer">
+      LOL KLAUSE WHAT THE FUCK ARE YOU TALKING ABOUT</a>
+    `, sound);
+
+    postNewMessageWithHTML(users.harakiri_salaryman, null, 9, `
+    wind broke his birdbrain again`, sound);
+
+    postNewMessageWithHTML(users.secondwind, null, 12, `
+    what do you mean; i`, sound);
+    postNewMessageWithHTML(users.secondwind, null, 19, `what the fuck i never linked to that`, sound);
+    postNewMessageWithHTML(users.secondwind, null, 21, `what`, sound);
+
+    postNewMessageWithHTML(users.mog, null, 31, `
+    look wind i know it's in your name, but you really need to stop smoking
+    whatever sawdust you're on rite now. <br />
+    you're wild as fuck right now`, sound);
+
+    postNewMessageWithHTML(users.secondwind, null, 39, `
+    <a class="user_secondwind"
+      href="https://www.scientificamerican.com/article/suspect-list-narrows-in-mysterious-bird-die-off/" target="_blank"
+      rel="noopener noreferrer">
+      no im serious. this was the original link i was posting</a>`, sound);
+
+    postNewMessageWithHTML(users.boma, "user_boma_typing_0", 41, `. . . boma is typing. . .`, sound);
+
+    postNewMessageWithHTML(users.secondwind, "secondwind_change_0", 42, `the link changed after i posted the text`, sound);
+
+    postNewMessageWithHTML(users.klause, null, 49, `and I'M the brain-damaged one here? ok lol`, sound);
+
+    postNewMessageWithHTML(users.mog, null, 57, `
+    if klause is on the good side of history you really fucked up somewhere
+    lol`, sound);
+    postNewMessageWithHTML(users.klause, null, 60, `^this`, sound);
+
+    postNewMessageWithHTML(users.a_barcode_font_no_link, "unknown_0", 64, `we know why`, sound);
+
+    postNewMessageWithHTML(users.mog, null, 67, `wait who the fuck is this`, sound);
+    postNewMessageWithHTML(users.mog, null, 69, `?`, sound);
+
+    replaceMessageOnIdTag(null, "unknown_0", 74, `<a href="../documentation/bound/bound-1.html">we know why</a>`, sound);
+    // postNewMessageWithHTML(users., null, 1, ``, sound);
+
+  </script>
+  <!-- <p class="user_secondwind">
     <a class="user_secondwind"
       href="https://ktar.com/story/4948388/bird-flu-case-found-in-southern-wisconsin-chicken-flock/" target="_blank"
       rel="noopener noreferrer">
       LOL KLAUSE WHAT THE FUCK ARE YOU TALKING ABOUT</a>
-  </p>
+  </p> -->
 
-  <p class="user_harakiri_salaryman">wind broke his birdbrain again</p>
+  <!-- <p class="user_harakiri_salaryman">wind broke his birdbrain again</p> -->
 
-  <p class="user_secondwind">what do you mean; i</p>
+  <!-- <p class="user_secondwind">what do you mean; i</p>
   <p class="user_secondwind">what the fuck i never linked to that</p>
-  <p class="user_secondwind">what</p>
+  <p class="user_secondwind">what</p> -->
 
-  <p class="user_mog">
+  <!-- <p class="user_mog">
     look wind i know it's in your name, but you really need to stop smoking
     whatever sawdust you're on rite now. <br />
     you're wild as fuck right now
-  </p>
+  </p> -->
 
-  <p id="secondwind_change_0" class="user_secondwind">
+  <!-- <p id="secondwind_change_0" class="user_secondwind">
     <a class="user_secondwind"
       href="https://www.scientificamerican.com/article/suspect-list-narrows-in-mysterious-bird-die-off/" target="_blank"
       rel="noopener noreferrer">
       no im serious. this was the original link i was posting</a>
   </p>
 
-  <p id="user_boma_typing_0" class="user_boma">. . . boma is typing. . .</p>
+  <p id="user_boma_typing_0" class="user_boma">. . . boma is typing. . .</p> -->
 
-  <p id="secondwind_change_0" class="user_secondwind">
+  <!-- <p id="secondwind_change_0" class="user_secondwind">
     the link changed after i posted the text
-  </p>
+  </p> -->
 
-  <p class="user_klause">and I'M the brain-damaged one here? ok lol</p>
-  <p class="user_mog">
+  <!-- <p class="user_klause">and I'M the brain-damaged one here? ok lol</p> -->
+  <!-- <p class="user_mog">
     if klause is on the good side of history you really fucked up somewhere
     lol
-  </p>
-  <p class="user_klause">^this</p>
+  </p> -->
+  <!-- <p class="user_klause">^this</p> -->
 
-  <p id="unknown_0" class="a_barcode_font_nolink">we know why</p>
+  <!-- <p id="unknown_0" class="a_barcode_font_nolink">we know why</p> -->
   <!-- <a href="/documentation/7.html">we know why</a> -->
 
-  <p class="user_mog">wait who the fuck is this</p>
-  <p class="user_mog">?</p>
+  <!-- <p class="user_mog">wait who the fuck is this</p>
+  <p class="user_mog">?</p> -->
 
   <!-- <a href="../bound/bound-1.html">we know why</a> -->
-  <script>
+  <!-- <script>
     setTimeout(() => {
       document.getElementById("unknown_0").innerHTML =
         '<a href="../bound/bound-1.html">we know why</a>';
     }, 23000);
-  </script>
+  </script> -->
 
   <!-- <script>
       setTimeout(() => {}, 6000);
