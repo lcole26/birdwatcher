@@ -15,12 +15,16 @@
  *  https://stackoverflow.com/questions/42158073/how-to-create-and-append-text-in-the-body-using-javascript
  *  https://stackoverflow.com/questions/4851699/setting-the-id-attribute-of-an-input-element-dynamically-in-ie-alternative-for
  *  https://www.codegrepper.com/code-examples/javascript/how+to+add+a+paragraph+in+html+using+javascript
- *
+ * https://stackoverflow.com/questions/29182736/creating-link-in-javascript-and-integrating-it-into-createtextnode
  */
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------
+/**library loading stuff */
+
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 /**
  * getter/setter stuff
  */
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 var msg_end_marker = "+++";
 var sms_msg_format =
@@ -35,12 +39,15 @@ const users = {
   boma: "user_boma",
   secondwind: "user_secondwind",
   harakiri_salaryman: "user_harakiri_salaryman",
+  mog: "user_mog",
+  unknown_entity: "user_unknown_entity",
 };
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 function CheckForValue(item) {
   return sessionStorage.getItem(item);
 }
+
 /*
  * https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission
  *
@@ -67,9 +74,24 @@ var SetUpMsgReceivedAudio = function () {
       // "media/audio/Serial Experiments Lain - Powerline Noise.mp3",
       "../media/audio/545372__stwime__up3.ogg",
     ],
-    volume: 0.5,
+    volume: base_volume,
     html5: true,
   });
+};
+
+var SetUpMsgReceivedAudio = function (base_volume) {
+  return new Howl({
+    src: [
+      // "media/audio/Serial Experiments Lain - Powerline Noise.mp3",
+      "../media/audio/545372__stwime__up3.ogg",
+    ],
+    volume: base_volume,
+    html5: true,
+  });
+};
+
+var updateVolume = function (sound, new_volume) {
+  sound.volume(new_volume);
 };
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -101,13 +123,16 @@ function StrikeText(elem_id) {
  * @param {*} msg_id
  * @param {*} timeout_factor
  */
-function unhideMessageonTimer(msg_id, timeout_factor) {
+function showMessageonTimer(msg_id, timeout_factor) {
   let msg = document.getElementById(msg_id);
   setTimeout(() => {
-    if (msg != null && msg.getAttribute("hidden").equals(true)) {
-      msg.setAttribute("hidden", false);
-    }
-  }, timeout_factor);
+    // if (msg != null && msg.getAttribute("hidden").equals(true)) {
+    //   msg.setAttribute("hidden", false);
+    // }
+    // msg.hidden = false;
+    msg.style.display = "block";
+    sound.play();
+  }, timeout_factor * 1000);
   // if (msg != null && msg.getAttribute("hidden").equals("hidden")) {
 }
 
@@ -141,13 +166,12 @@ var format = function (str, col) {
 };
 
 /**
- *
- * @param {*} message_marker_elem_id
- * @param {*} user_class
- * @param {*} message_id
- * @param {*} msg_end_marker
- * @param {*} time_offset
- * @param {*} msg_sound
+ * 
+ * @param {*} user_class 
+ * @param {*} new_message_id 
+ * @param {*} time_offset 
+ * @param {*} user_msg 
+ * @param {*} msg_sound 
  */
 var postNewMessage = function (
   user_class,
@@ -156,14 +180,6 @@ var postNewMessage = function (
   user_msg,
   msg_sound
 ) {
-  // let end_mark = document.getElementById(message_marker_elem_id);
-  // let user_msg = document.getElementById(user_msg);
-  // let msg = format(sms_msg_format, {
-  //   username: user,
-  //   msg: user_msg,
-  //   msg_end_marker: msg_end_marker,
-  // });
-
   let new_paragraph_obj = document.createElement("p");
   let new_text_node_obj = document.createTextNode(user_msg);
 
@@ -178,23 +194,79 @@ var postNewMessage = function (
 
 /**
  * 
- * @param {
- } message_marker_elem_id 
+ * @param {*} user_class 
+ * @param {*} new_message_id 
+ * @param {*} time_offset 
+ * @param {*} user_msg 
+ * @param {*} msg_sound 
+ */
+var postNewMessageWithHTML = function (
+  user_class,
+  new_message_id,
+  time_offset,
+  user_msg,
+  msg_sound
+) {
+  let new_paragraph_obj = document.createElement("p");
+  let new_text_node_obj = document.createTextNode(user_msg);
+
+  setTimeout(() => {
+    new_paragraph_obj.id = new_message_id;
+    new_paragraph_obj.className = user_class;
+    new_paragraph_obj.innerHTML = user_msg;
+    // new_paragraph_obj.appendChild(new_text_node_obj);
+    document.body.appendChild(new_paragraph_obj);
+    msg_sound.play();
+  }, time_offset * 1000);
+};
+
+/**
+ * 
  * @param {*} user_class 
  * @param {*} message_id 
- * @param {*} msg_end_marker 
  * @param {*} time_offset 
+ * @param {*} new_user_msg 
  * @param {*} msg_sound 
  */
 var appendNewMessage = function (
   user_class,
   message_id,
-  msg_end_marker,
   time_offset,
+  new_user_msg,
   msg_sound
 ) {
-  let msg = document.getElementById(user_class);
-  document.getElementById(user_class).innerHTML += msg;
+  setTimeout(() => {
+    let _new_msg = document.createElement('p');
+    _new_msg.className = user_class;
+    _new_msg.innerHTML = new_user_msg;
+    document.getElementById(message_id).appendChild(_new_msg);
+    msg_sound.play();
+  }, time_offset * 1000);
+};
+
+/**
+ * 
+ * @param {*} user_class 
+ * @param {*} message_id 
+ * @param {*} time_offset 
+ * @param {*} new_user_msg 
+ * @param {*} msg_sound 
+ */
+var replaceMessageOnIdTag = function (
+  user_class,
+  message_id,
+  time_offset,
+  new_user_msg,
+  msg_sound
+) {
+  setTimeout(() => {
+    let _new_msg = document.createElement('p');
+    _new_msg.className = user_class;
+    _new_msg.innerHTML = new_user_msg;
+    // let f = document.getElementById(message_id);
+    document.getElementById(message_id).innerHTML = _new_msg.innerHTML;
+    msg_sound.play();
+  }, time_offset * 1000);
 };
 
 function newMessageWithLink() {
