@@ -40,7 +40,7 @@ const users = {
   secondwind: "user_secondwind",
   harakiri_salaryman: "user_harakiri_salaryman",
   mog: "user_mog",
-  unknown_entity: "user_unknown_entity",
+  unknown_entity: "unknown_entity",
 
   // various
   a_barcode_font_nolink: "a_barcode_font_nolink"
@@ -191,7 +191,9 @@ var postNewMessage = function (
     new_paragraph_obj.className = user_class;
     new_paragraph_obj.appendChild(new_text_node_obj);
     document.body.appendChild(new_paragraph_obj);
-    msg_sound.play();
+    if (msg_sound != null) {
+      msg_sound.play();
+    }
   }, time_offset * 1000);
 };
 
@@ -219,7 +221,10 @@ var postNewMessageWithHTML = function (
     new_paragraph_obj.innerHTML = user_msg;
     // new_paragraph_obj.appendChild(new_text_node_obj);
     document.body.appendChild(new_paragraph_obj);
-    msg_sound.play();
+
+    if (msg_sound != null) {
+      msg_sound.play();
+    }
   }, time_offset * 1000);
 };
 
@@ -243,7 +248,11 @@ var appendNewMessage = function (
     _new_msg.className = user_class;
     _new_msg.innerHTML = new_user_msg;
     document.getElementById(message_id).appendChild(_new_msg);
-    msg_sound.play();
+    // document.getElementById(message_id).insertAdjacentHTML('beforeend', _new_msg.innerHTML);
+
+    if (msg_sound != null) {
+      msg_sound.play();
+    }
   }, time_offset * 1000);
 };
 
@@ -268,7 +277,10 @@ var replaceMessageOnIdTag = function (
     _new_msg.innerHTML = new_user_msg;
     // let f = document.getElementById(message_id);
     document.getElementById(message_id).innerHTML = _new_msg.innerHTML;
-    msg_sound.play();
+
+    if (msg_sound != null) {
+      msg_sound.play();
+    }
   }, time_offset * 1000);
 };
 

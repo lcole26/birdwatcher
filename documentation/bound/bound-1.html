@@ -43,19 +43,19 @@
       on time
     </p> -->
 
-  <p id="unknown_1" class="a_barcode_font_nolink">i am who?</p>
+  <!-- <p id="unknown_1" class="a_barcode_font_nolink">i am who?</p> -->
 
-  <p class="user_mog">okokok look. look, everyone just chill the fuck out</p>
+  <!-- <p class="user_mog">okokok look. look, everyone just chill the fuck out</p>
   <p id="user_mog_takeover" class="user_mog">
     first off, whoever you are. nice party trick, honestly. <br />
     im actually kind of curious how you're doing all of that
-  </p>
+  </p> -->
 
-  <script>
-    setTimeout(() => {
-      document.getElementById("user_mog_takeover").innerHTML +=
-        '<p id="unknown_2"class="a_barcode_font_nolink"><br> birds aren\'t real.</a>';
-    }, 15000);
+  <!-- <script>
+    // setTimeout(() => {
+    //   document.getElementById("user_mog_takeover").innerHTML +=
+    //     '<p id="unknown_2" class="a_barcode_font_nolink"><br> birds aren\'t real.';
+    // }, 15000);
 
     setTimeout(() => {
       document.getElementById("unknown_2").innerHTML =
@@ -72,9 +72,9 @@
       //   document.getElementById("unknown_2").innerHTML +=
       //     '<a href="/documentation/bound/bound-2.html"><br> birds aren\'t real.</a>';
       // }, 23000);
-  </script>
+  </script> -->
 
-  <p id="mog_confusion" class="user_mog">
+  <!-- <p id="mog_confusion" class="user_mog">
     mind throwing out a name? number? ssn? bat signal? anything like that?
   </p>
 
@@ -83,7 +83,7 @@
       document.getElementById("mog_confusion").innerHTML +=
         '<p id="mog_confusion" class="user_mog">wait what the fuck how did he</p>';
     }, 19000);
-  </script>
+  </script> -->
 
   <script>
     var sound = SetUpMsgReceivedAudio();
@@ -93,24 +93,42 @@
       weird that he doesn't have a chat bubble around is speech. maybe it's a
       mod thing?`, sound);
     postNewMessageWithHTML(_users.boma, null, 3, `his*`, sound);
+
     postNewMessageWithHTML(_users.a_barcode_font_nolink, "unknown_0", 3.1, `who am i?`, sound);
     replaceMessageOnIdTag(_users.a_barcode_font_nolink, "unknown_0", 6, `who is who?`, sound);
 
-    postNewMessageWithHTML(_users.secondwind, null, 9, `
+    postNewMessageWithHTML(_users.secondwind, null, 12, `
       look klause, between you and boma, ik you two are the black hat linus
       torvalds kind of people`, sound);
-    postNewMessageWithHTML(_users.second(), null, 13, `
+    postNewMessageWithHTML(_users.secondwind, null, 17, `
       but this trolling is a lot of work, even for you`, sound);
-    postNewMessageWithHTML(_users.klause, null, 18, `
-      ITS NOT FUCKING ME RIGHT NOW I DON't KNOW WHAT THE FUCK IS GOING ON`, sound);
-    postNewMessageWithHTML(_users.klause, null, 24, `
+
+    postNewMessageWithHTML(_users.klause, null, 23, `
+    ITS NOT FUCKING ME RIGHT NOW I DON't KNOW WHAT THE FUCK IS GOING ON`, sound);
+    postNewMessageWithHTML(_users.klause, null, 27, `
       and yeah youre right, this is too much work for me. im not THAT generous
       on time`, sound);
-    postNewMessageWithHTML(_users.a_barcode_font_nolink, "unknown_1", 1, `i am who?`, sound);
-    postNewMessageWithHTML(_users., null, 1, ``, sound);
-    postNewMessageWithHTML(_users., null, 1, ``, sound);
-    postNewMessageWithHTML(_users., null, 1, ``, sound);
-    postNewMessageWithHTML(_users., null, 1, ``, sound);
+
+    postNewMessageWithHTML(_users.a_barcode_font_nolink, "unknown_1", 28, `i am who?`, sound);
+
+    postNewMessageWithHTML(_users.mog, null, 35, `okokok look. look, everyone just chill the fuck out`, sound);
+    postNewMessageWithHTML(_users.mog, "user_mog_takeover", 41, `
+    first off, whoever you are. nice party trick, honestly. <br />
+    im actually kind of curious how you're doing all of that`, sound);
+
+    appendNewMessage(_users.mog, "user_mog_takeover", 46, `<p id="unknown_2" class="a_barcode_font_nolink"> birds aren\'t real.</p>`, sound);
+    replaceMessageOnIdTag(null, "unknown_2", 66, `<a href="./documentation/bound/bound-2.html">birds aren\'t real.</a>`, sound);
+
+
+    postNewMessageWithHTML(_users.mog, null, 51, `
+    mind throwing out a name? number? ssn? bat signal? anything like that?`, sound);
+
+    postNewMessageWithHTML(_users.mog, null, 57, `
+    wait what the fuck how did he`, sound);
+
+
+
+
   </script>
 </body>
 
