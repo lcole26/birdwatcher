@@ -15,7 +15,7 @@
 <body>
   <script>
     alert("aren't you going through life too fast?");
-    var sound = SetUpMsgReceivedAudio();
+
   </script>
 
   <!-- <p class="user_harakiri_salaryman">
@@ -115,101 +115,103 @@
   <!-- <a href="./documentation/9.html">+ + + + + + +</a> -->
 
   <script>
-    postNewMessageWithHTML(users.harakiri_salaryman, null, 1, `
+    var sound = SetUpMsgReceivedAudio();
+    var _users = users;
+    postNewMessageWithHTML(_users.harakiri_salaryman, null, 1, `
     in all seriousness, klause, did you remember your medication today? im
     legit asking`, sound);
 
-    postNewMessageWithHTML(users.klause, null, 9, `
+    postNewMessageWithHTML(_users.klause, null, 13, `
     hm? yeah why? also thanks for asking, not a lot of people do these days`, sound);
 
-    postNewMessageWithHTML(users.boma, null, 13, `
+    postNewMessageWithHTML(_users.boma, null, 20, `
     yeah i was gonna ask the same thing, but he beat me to it lol`, sound);
 
-    postNewMessageWithHTML(users.boma, null, 17, `
+    postNewMessageWithHTML(_users.boma, null, 25, `
     we just want to make sure you're good, thats all`, sound);
 
-    postNewMessageWithHTML(users.klause, null, 23, `
+    postNewMessageWithHTML(_users.klause, null, 34, `
     i could cry right now lol. seriously tho, thanks. <br>
     i don't really talk to my family much these days so`, sound);
 
-    postNewMessageWithHTML(users.klause, null, 25, `
+    postNewMessageWithHTML(_users.klause, null, 37, `
     its just`, sound);
 
-    postNewMessageWithHTML(users.mog, null, 26, `just?
+    postNewMessageWithHTML(_users.mog, null, 39, `just?
     `, sound);
 
-    postNewMessageWithHTML(users.klause, null, 31, `
+    postNewMessageWithHTML(_users.klause, null, 43, `
     like you ever go into a room and forget why you're there when you get
     there?
     `, sound);
 
-    postNewMessageWithHTML(users.harakiri_salaryman, null, 36, `
+    postNewMessageWithHTML(_users.harakiri_salaryman, null, 49, `
     me when i went downstairs a few min ago
     `, sound);
 
-    postNewMessageWithHTML(users.harakiri_salaryman, null, 41, `
+    postNewMessageWithHTML(_users.harakiri_salaryman, null, 54, `
     my dumb ass came back upstairs enpty handed lmfao
     `, sound);
 
-    postNewMessageWithHTML(users.harakiri_salaryman, null, 43, `
+    postNewMessageWithHTML(_users.harakiri_salaryman, null, 57, `
     empty*
     `, sound);
 
-    postNewMessageWithHTML(users.mog, null, 49, `
+    postNewMessageWithHTML(_users.mog, null, 63, `
     i mean yeah id think itd happen t everyone at least every once in a while<br>
     or pretty often
     `, sound);
 
-    postNewMessageWithHTML(users.klause, null, 56, `
+    postNewMessageWithHTML(_users.klause, null, 69, `
     yeah, but i feel like that ALL of the fucking time now. like i have legit
     holes im my memory i feel like
     `, sound);
 
-    postNewMessageWithHTML(users.klause, null, 67, `
+    postNewMessageWithHTML(_users.klause, null, 80, `
     like people tell me about the shit i end up in sometimes and its like<br>
     WHAT <br>
     WHO <br>
     ME???
     `, sound);
 
-    postNewMessageWithHTML(users.boma, null, 72, `
+    postNewMessageWithHTML(_users.boma, null, 88, `
     you been stressed a lot lately? i tend to forget shit more when i have
     like work or something on my ass all the time
     `, sound);
 
-    postNewMessageWithHTML(users.klause, null, 76, `
+    postNewMessageWithHTML(_users.klause, null, 103, `
     my projects have been picking up a lot lately
     `, sound);
 
-    postNewMessageWithHTML(users.klause, null, 80, `
+    postNewMessageWithHTML(_users.klause, null, 109, `
     i assumed it was just extra stress tbh
     `, sound);
 
-    postNewMessageWithHTML(users.harakiri_salaryman, null, 83, `prob is
+    postNewMessageWithHTML(_users.harakiri_salaryman, null, 116, `prob is
     `, sound);
-    postNewMessageWithHTML(users.harakiri_salaryman, null, 87, `
+    postNewMessageWithHTML(_users.harakiri_salaryman, null, 120, `
     still might wanna get that checked out though if it gets worse
     `, sound);
 
-    postNewMessageWithHTML(users.mog, null, 91, `
+    postNewMessageWithHTML(_users.mog, null, 126, `
     yeah, especially since weall already have our issues and personal demons
     `, sound);
-    postNewMessageWithHTML(users.mog, null, 95, `
+    postNewMessageWithHTML(_users.mog, null, 134, `
     obv ofc, but if anyone needs to talk or anything, i'm here <br>
     `, sound);
 
-    postNewMessageWithHTML(users.harakiri_salaryman, null, 98, `
+    postNewMessageWithHTML(_users.harakiri_salaryman, null, 140, `
     i never fancied you the sentimental type, mog
     `, sound);
 
-    postNewMessageWithHTML(users.mog, null, 102, `
+    postNewMessageWithHTML(_users.mog, null, 143, `
     except salaryman*
     `, sound);
 
-    postNewMessageWithHTML(users.harakiri_salaryman, null, 104, `lmao
+    postNewMessageWithHTML(_users.harakiri_salaryman, null, 146, `lmao
     `, sound);
 
-    postNewMessageWithHTML(users.mog, null, 111, `
+    postNewMessageWithHTML(_users.mog, null, 156, `
     it kind of runs in our family too <br>
     which is why i take it a bit more seriously than i would other things<br>
     `, sound);
@@ -218,7 +220,7 @@
     //   document.createElement('p').innerHTML = '<a href="./documentation/9.html">+ + + + + + +</a>';
     // }, 121);
 
-    postNewMessageWithHTML(users.unknown_entity, null, 121, `
+    postNewMessageWithHTML(_users.unknown_entity, null, 161, `
     <a href="./documentation/9.html">+ + + + + + +</a>
     `, sound);
 

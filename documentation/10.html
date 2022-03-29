@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>noflock</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js_stuff/main.js"></script>
+  <script src="../node_modules/howler/src/howler.core.js"></script>
+  <base href="../">
 </head>
 
 <body>
@@ -14,15 +17,17 @@
     alert("did you miss it? \nthe sixth bird?");
   </script>
 
-  <p class="user_mog">yo what</p>
+  <!-- <p class="user_mog">yo what</p>
+
   <p class="user_secondwind">did anyone else just see</p>
-  <p id="end" class="unknown_entity">+ + + + + + +</p>
+  
+  <p id="end" class="unknown_entity">+ + + + + + +</p> -->
 
   <!-- <p class="user_boma">boma has logged out.</p> -->
   <!-- <p class="user_secondwind">secondwind has logged out.</p> -->
   <!-- <p class="user_harakiri_salaryman">harakiri salaryman has logged out.</p> -->
   <!-- <p class="user_klause">klause has logged out.</p> -->
-  <script>
+  <!-- <script>
     setTimeout(() => {
       document.getElementById("end").innerHTML +=
         '<p class="user_boma">boma has logged out.</p>';
@@ -46,6 +51,29 @@
         <a href="../index.html">follow the birdie</a>
         </p>`;
     }, 7000);
+  </script> -->
+
+  <script>
+    var sound = SetUpMsgReceivedAudio();
+    var _users = users;
+
+    postNewMessageWithHTML(_users.mog, null, 3, `yo what`, sound);
+
+    postNewMessageWithHTML(_users.secondwind, null, 4, `did anyone else just see`, sound);
+    postNewMessageWithHTML(_users.unknown_entity, "end", 6, `+ + + + + + +`, sound);
+
+    appendNewMessage(_users.boma, "end", 10, `<p class="user_boma">boma has logged out.</p>`, sound);
+    appendNewMessage(_users.secondwind, "end", 11, `<p class="user_secondwind">secondwind has logged out.</p>`, sound);
+    appendNewMessage(_users.harakiri_salaryman, "end", 11.5, `<p class="user_harakiri_salaryman">harakiri salaryman has logged out.</p>`, sound);
+    appendNewMessage(_users.klause, "end", 11.7, `<p class="user_klause">klause has logged out.</p>`, sound);
+
+    appendNewMessage(_users.unknown_entity, "end", 17, `<a href="../index.html">follow the birdie</a>`, sound);
+  // postNewMessageWithHTML(_users., null, 3, ``, sound);
+  // postNewMessageWithHTML(_users., null, 3, ``, sound);
+  // postNewMessageWithHTML(_users., null, 3, ``, sound);
+  // postNewMessageWithHTML(_users., null, 3, ``, sound);
+  // postNewMessageWithHTML(_users., null, 3, ``, sound);
+  // postNewMessageWithHTML(_users., null, 3, ``, sound);
   </script>
 
 </body>
