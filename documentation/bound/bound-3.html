@@ -15,11 +15,19 @@
   <p class="unknown_entity">the machines are the birds.</p>
   <p class="unknown_entity">birds aren't real.</p>
   <p class="unknown_entity">none of it is.</p>
-  <p class="unknown_entity">the trees are nests. phone homes.</p>
+  <p id="end" class="unknown_entity">the trees are nests. phone homes.</p>
 
-  <p class="unknown_entity">
+  <script>
+    setTimeout(() => {
+      document.getElementById("end").innerHTML += `
+      <p class="unknown_entity">
+      <a href="../../index.html">follow the birdie</a>
+      </p>`;
+    }, 16000);
+  </script>
+  <!-- <p class="unknown_entity">
     <a href="../index.html">follow the birdie</a>
-  </p>
+  </p> -->
 </body>
 
 </html>
