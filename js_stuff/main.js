@@ -36,6 +36,7 @@ const sound_urls = {
 
 const users = {
   klause: "user_klause",
+  klause_img: "user_klause_img",
   boma: "user_boma",
   secondwind: "user_secondwind",
   harakiri_salaryman: "user_harakiri_salaryman",
