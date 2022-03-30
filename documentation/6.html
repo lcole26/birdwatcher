@@ -35,24 +35,24 @@
     var sound = SetUpMsgReceivedAudio();
     var _users = users;
 
-    postNewMessageWithHTML(_users.klause, null, 4, `
+    postNewMessageWithHTML(null, null, 4, `
     <h1 class="user_klause">DO YOU SEE THIS</h1>`, sound);
 
-    postNewMessageWithHTML(_users.klause, null, 7, `
+    postNewMessageWithHTML(null, null, 7, `
     <h1 class="user_klause">DO YOU SEE WHAT I SEE</h1>`, sound);
 
-    postNewMessageWithHTML(_users.klause, null, 14, `<h1 class="user_klause">THE BIRDS ARE FUCKING DEAD DO YOU SEE THIS</h1>`, sound);
+    postNewMessageWithHTML(null, null, 14, `<h1 class="user_klause">THE BIRDS ARE FUCKING DEAD DO YOU SEE THIS</h1>`, sound);
     //   postNewMessageWithHTML(_users.klause, null, 14, `
     //   <a class="user_klause" href="./documentation/7.html">THE BIRDS ARE FUCKING DEAD DO YOU SEE THIS</a>
     //   <a class="user_klause" href="./documentation/7.html">THE BIRDS ARE FUCKING DEAD DO YOU SEE THIS</a>
     // </h1>`, sound);
-    postNewMessageWithHTML(_users.secondwind, null, 18, `<h1 class="user_secondwind">
+    postNewMessageWithHTML(null, null, 18, `<h1 class="user_secondwind">
     <a id="user_secondwind_change_0" class="user_secondwind" href="./documentation/7.html">LOL KLAUSE WHAT THE FUCK ARE YOU TALKING
       ABOUT</a>
     </h1>
     `, sound);
 
-    replaceMessageOnIdTag(_users.secondwind, "user_secondwind_change_0", 26, `
+    replaceMessageOnIdTag(null, "user_secondwind_change_0", 26, `
     <a id="secondwind_change_0" class="user_secondwind" href="./documentation/bound/bound-0.html">LOL KLAUSE WHAT THE FUCK ARE YOU TALKING ABOUT</a>
     `, sound);
 
