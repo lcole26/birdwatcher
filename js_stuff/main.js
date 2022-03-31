@@ -27,13 +27,14 @@
  */
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 var base_url = window.location.origin;
+var base_directory = window.location.pathname.split('/').at(1);
 
 var msg_end_marker = "+++";
 var sms_msg_format =
   '<p class="user.{username}">{msg}<br><br> {msg_end_marker}</p>';
 var sms_received_sound;
 const sound_urls = {
-  sms_received_sound_: base_url + "/media/audio/545372__stwime__up3.ogg",
+  sms_received_sound_: base_url + base_directory + "/media/audio/545372__stwime__up3.ogg",
 };
 
 const users = {
