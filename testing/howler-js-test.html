@@ -12,28 +12,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="/node_modules/howler/src/howler.core.js"></script>
-    <!-- <script type="module" src="/js_stuff/main.js"></script> -->
-    <!-- <script src="/js_stuff/main.js"></script> -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- <script src="../node_modules/howler/src/howler.core.js"></script> -->
+    <script src="../js_stuff/main.js"></script>
   </head>
   <body>
-    <!-- <base href="." /> -->
-    <p id="message_start">+++</p>
-    <script id="sound0">
-      var sound = new Howl({
-        src: [
-          // "media/audio/Serial Experiments Lain - Powerline Noise.mp3",
-          "media/audio/545372__stwime__up3.ogg",
-        ],
-        volume: 0.5,
-        html5: true,
-      });
-    </script>
     <script>
-      // var f = document.getElementById("sound0");
-      sound.play();
+      var sound = SetUpMsgReceivedAudio();
+    </script>
+
+    <p id="message_start">+++</p>
+    <script>
+      postNewMessage(users.klause, null, 2, "hi", sound);
+      postNewMessage(users.secondwind, "hell ya", 3, "whats good bro", sound);
     </script>
 
     <p id="klause_msg_0">lmao</p>
+    <p hidden id="klause_msg_0">this is hidden</p>
   </body>
 </html>

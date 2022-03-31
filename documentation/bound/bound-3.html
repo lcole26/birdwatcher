@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>machina</title>
-    <link rel="stylesheet" href="../../style.css" />
-  </head>
-  <body>
-    <p class="unknown_entity">do you hear the noise?</p>
-    <p class="unknown_entity">the noise we all hear?</p>
-    <p class="unknown_entity">the machines are the birds.</p>
-    <p class="unknown_entity">birds aren't real.</p>
-    <p class="unknown_entity">none of it is.</p>
-    <p class="unknown_entity">the trees are nests. phone homes.</p>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>machina</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+  <base href="../../">
+</head>
+
+<body>
+  <p class="unknown_entity">do you hear the noise?</p>
+  <p class="unknown_entity">the noise we all hear?</p>
+  <p class="unknown_entity">the machines are the birds.</p>
+  <p class="unknown_entity">birds aren't real.</p>
+  <p class="unknown_entity">none of it is.</p>
+  <p id="end" class="unknown_entity">the trees are nests. phone homes.</p>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("end").innerHTML += `
+      <p class="unknown_entity">
+      <a href="./index.html">follow the birdie</a>
+      </p>`;
+    }, 16000);
+  </script>
+  <!-- <p class="unknown_entity">
+    <a href="../index.html">follow the birdie</a>
+  </p> -->
+</body>
+
 </html>
