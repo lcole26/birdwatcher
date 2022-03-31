@@ -1,6 +1,7 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap"); */
 
 @import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Libre+Barcode+39&family=Libre+Barcode+39+Extended+Text&display=swap");
+
 /**
     font-family: 'Libre Barcode 128 Text', cursive;
 
@@ -11,6 +12,7 @@
 input[id="cb"] {
   display: none;
 }
+
 :root {
   --body_background_color: rgb(112, 128, 144);
   --body_color: #334b63;
@@ -42,6 +44,7 @@ body {
 .grid_container {
   display: grid;
 }
+
 .inline_grid_container {
   display: -ms-inline-grid;
 }
@@ -69,27 +72,33 @@ a {
   /* font-size: 40px; */
   font-size: var(--link_font_size);
 }
+
 h1 {
   /* color: cadetblue; */
   color: #99a3ac;
   /* font-size: 2rem; */
 }
+
 h2 {
   /* color: cadetblue; */
   color: #99a3ac;
 }
+
 h3 {
   /* color: cadetblue; */
   color: #99a3ac;
 }
+
 h4 {
   /* color: cadetblue; */
   color: #99a3ac;
 }
+
 h5 {
   /* color: cadetblue; */
   color: #99a3ac;
 }
+
 h6 {
   /* color: cadetblue; */
   color: #99a3ac;
@@ -98,6 +107,7 @@ h6 {
 link {
   color: slategray;
 }
+
 /* -------------------------------------------------- */
 /* users */
 
@@ -110,6 +120,7 @@ link {
   padding-bottom: var(--sms_text_bottom_padding_offset);
   padding-top: var(--sms_text_top_padding_offset);
 }
+
 .user_klause_img {
   /* box-shadow: 0 0 3pt 3pt #020c6d; */
   border: 0.4rem double #020c6d;
@@ -169,6 +180,7 @@ link {
   border: 0.4rem double #204350;
   border-radius: 1rem;
 }
+
 .user_harakiri_salaryman_link {
   padding-left: var(--sms_text_left_padding_offset);
   padding-bottom: var(--sms_text_bottom_padding_offset);
@@ -185,6 +197,7 @@ link {
   padding-bottom: var(--sms_text_bottom_padding_offset);
   padding-top: var(--sms_text_top_padding_offset);
 }
+
 .user_mog_img {
   border: 0.4rem double #000;
   border-radius: 1rem;
