@@ -1,0 +1,12 @@
+:root {
+  --sideBarOpenWidth: 15.625rem;
+}
+
+.sideMenu {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: inherit;
+  top: 0%;
+  left: 0%;
+}

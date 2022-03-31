@@ -12,6 +12,8 @@ input[id="cb"] {
   display: none;
 }
 :root {
+  --body_background_color: rgb(112, 128, 144);
+  --body_color: #334b63;
   --sms_text_left_padding_offset: 0.6vw;
   --sms_text_bottom_padding_offset: 0.3vw;
   --sms_text_top_padding_offset: 0.3vw;
@@ -19,10 +21,11 @@ input[id="cb"] {
   --link_font_size: 2.5rem;
   --outline_offset: 0.2rem;
 }
+
 body {
-  background-color: rgb(112, 128, 144);
+  background-color: var(--body_background_color);
   /* color: cornflowerblue; */
-  color: #334b63;
+  color: var(--body_color);
   font-size: 100%;
   /* 62.5% of the base size of 16px = 10px.*/
   /* font-size: 62.5%; */
@@ -35,6 +38,7 @@ body {
 .yell {
   color: rgb(250, 80, 80);
 }
+
 .grid_container {
   display: grid;
 }
@@ -94,6 +98,8 @@ h6 {
 link {
   color: slategray;
 }
+/* -------------------------------------------------- */
+/* users */
 
 .user_klause {
   color: #020c6d;
@@ -187,3 +193,8 @@ link {
 /* img {
   border: 1rem solid #000;
 } */
+
+/* -------------------------------------------------- */
+.menu_panel {
+  height: 100%;
+}

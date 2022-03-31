@@ -1,35 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>noflock</title>
-  </head>
-  <body>
-    <script>
-      alert("did you miss it? \nthe fifth bird?");
-      // if(window.confirm("did you miss it? \nthe fifth bird?")){
 
-      // }
-    </script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>noflock</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js_stuff/main.js"></script>
+  <!-- <script src="../node_modules/howler/src/howler.core.js"></script> -->
 
-    <p class="user_mog">yo what</p>
-    <p class="user_secondwind">did anyone else just see</p>
-    <p id="end">.</p>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <base href="../">
+</head>
 
-    <p class="user_boma">boma has logged out.</p>
-    <p class="user_secondwind">secondwind has logged out.</p>
-    <p class="user_harakiri_salaryman">harakiri salaryman has logged out.</p>
-    <p class="user_klause">klause has logged out.</p>
+<body>
+  <script>
+    alert("did you miss it? \nthe sixth bird?");
+  </script>
 
-    <script>
-      setTimeout(() => {
-        document.
-      }, 2000);
-      setTimeout(() => {}, 2500);
-      setTimeout(() => {}, 2600);
-      setTimeout(() => {}, 2900);
-    </script>
-  </body>
+  <!-- <p class="user_mog">yo what</p>
+
+  <p class="user_secondwind">did anyone else just see</p>
+  
+  <p id="end" class="unknown_entity">+ + + + + + +</p> -->
+
+  <!-- <p class="user_boma">boma has logged out.</p> -->
+  <!-- <p class="user_secondwind">secondwind has logged out.</p> -->
+  <!-- <p class="user_harakiri_salaryman">harakiri salaryman has logged out.</p> -->
+  <!-- <p class="user_klause">klause has logged out.</p> -->
+  <!-- <script>
+    setTimeout(() => {
+      document.getElementById("end").innerHTML +=
+        '<p class="user_boma">boma has logged out.</p>';
+    }, 4000);
+    setTimeout(() => {
+      document.getElementById("end").innerHTML +=
+        '<p class="user_secondwind">secondwind has logged out.</p>';
+    }, 5000);
+    setTimeout(() => {
+      document.getElementById("end").innerHTML +=
+        '<p class="user_harakiri_salaryman">harakiri salaryman has logged out.</p>';
+    }, 5500);
+    setTimeout(() => {
+      document.getElementById("end").innerHTML +=
+        '<p class="user_klause">klause has logged out.</p>';
+    }, 5700);
+
+    setTimeout(() => {
+      document.getElementById("end").innerHTML += `
+        <p class="unknown_entity">
+        <a href="../index.html">follow the birdie</a>
+        </p>`;
+    }, 7000);
+  </script> -->
+
+  <script>
+    var sound = SetUpMsgReceivedAudio();
+    var _users = users;
+
+    postNewMessageWithHTML(_users.mog, null, 3, `yo what`, sound);
+
+    postNewMessageWithHTML(_users.secondwind, null, 4, `did anyone else just see`, sound);
+    postNewMessageWithHTML(_users.unknown_entity, "end", 6, `+ + + + + + +`, sound);
+
+    appendNewMessage(_users.boma, "end", 10, `<p class="user_boma">boma has logged out.</p>`, sound);
+    appendNewMessage(_users.secondwind, "end", 11, `<p class="user_secondwind">secondwind has logged out.</p>`, sound);
+    appendNewMessage(_users.harakiri_salaryman, "end", 11.5, `<p class="user_harakiri_salaryman">harakiri salaryman has logged out.</p>`, sound);
+    appendNewMessage(_users.klause, "end", 11.7, `<p class="user_klause">klause has logged out.</p>`, sound);
+
+    appendNewMessage(_users.unknown_entity, "end", 17, `<a href="../index.html">follow the birdie</a>`, sound);
+  </script>
+
+</body>
+
 </html>

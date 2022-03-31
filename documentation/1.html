@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dreamer machination</title>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body>
-    <h1>
-      I&#39;ve seen this exact flock in recurring dreams for the past Ten years
-      - @birdsarentreal
-    </h1>
-    <a href="../documentation/2.html">have you now?</a>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dreamer machination</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js_stuff/main.js"></script>
+  <!-- <script src="../node_modules/howler/src/howler.core.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <base href="../">
+</head>
+
+<body>
+
+  <h1>
+    I&#39;ve seen this exact flock in recurring dreams for the past Ten years
+    - @birdsarentreal
+  </h1>
+
+  <script>
+    var sound = SetUpMsgReceivedAudio();
+    postNewMessageWithHTML(null, null, 6, `
+      <a href="./documentation/2.html">have you now?</a>`, sound);
+  </script>
+  <!-- <a href="./2.html">have you now?</a> -->
+</body>
+
 </html>
