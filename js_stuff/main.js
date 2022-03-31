@@ -36,7 +36,7 @@ var sms_msg_format =
 var sms_received_sound;
 const sound_urls = {
   // sms_received_sound_url: base_url + "/" + base_directory + "/media/audio/545372__stwime__up3.ogg",
-  sms_received_sound_url: base_directory + "media/audio/545372__stwime__up3.ogg",
+  sms_received_sound_url: "../media/audio/545372__stwime__up3.ogg",
 };
 
 const users = {
@@ -87,13 +87,12 @@ var SetUpMsgReceivedAudio = function () {
   });
 };
 
-var SetUpMsgReceivedAudio = function (base_volume) {
+var SetUpMsgReceivedAudioFromURL = function (url) {
   return new Howl({
     src: [
       // "media/audio/Serial Experiments Lain - Powerline Noise.mp3",
-      sound_urls.sms_received_sound_url,
+      url,
     ],
-    volume: base_volume,
     html5: true,
   });
 };
