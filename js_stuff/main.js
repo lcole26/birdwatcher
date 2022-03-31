@@ -78,7 +78,6 @@ var SetUpMsgReceivedAudio = function () {
       // "media/audio/Serial Experiments Lain - Powerline Noise.mp3",
       "../media/audio/545372__stwime__up3.ogg",
     ],
-    volume: base_volume,
     html5: true,
   });
 };
