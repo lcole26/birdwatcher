@@ -36,8 +36,8 @@ var sms_msg_format =
 var sms_received_sound;
 const sound_urls = {
   // sms_received_sound_url: base_url + "/" + base_directory + "/media/audio/545372__stwime__up3.ogg",
-  sms_received_sound_url: "../media/audio/545372__stwime__up3.ogg",
-  sms_received_sound_url_github: "https://lcole26.github.io/birdwatcher/media/audio/545372__stwime__up3.ogg ",
+  sms_received_sound_url: "./media/audio/545372__stwime__up3.ogg",
+  // sms_received_sound_url_github: "https://lcole26.github.io/birdwatcher/media/audio/545372__stwime__up3.ogg ",
 
 };
 
@@ -83,7 +83,7 @@ var SetUpMsgReceivedAudio = function () {
   return new Howl({
     src: [
       // "media/audio/Serial Experiments Lain - Powerline Noise.mp3",
-      sound_urls.sms_received_sound_url_github,
+      sound_urls.sms_received_sound_url,
     ],
     html5: true,
   });
