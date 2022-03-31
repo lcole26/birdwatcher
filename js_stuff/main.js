@@ -34,7 +34,8 @@ var sms_msg_format =
   '<p class="user.{username}">{msg}<br><br> {msg_end_marker}</p>';
 var sms_received_sound;
 const sound_urls = {
-  sms_received_sound_url: base_url + "/" + base_directory + "/media/audio/545372__stwime__up3.ogg",
+  // sms_received_sound_url: base_url + "/" + base_directory + "/media/audio/545372__stwime__up3.ogg",
+  sms_received_sound_url: "../media/audio/545372__stwime__up3.ogg",
 };
 
 const users = {
