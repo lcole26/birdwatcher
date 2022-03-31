@@ -28,7 +28,7 @@
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 var base_url = window.location.origin;
 // var base_directory = window.location.pathname.split('/').find(el => el !== "");
-var base_directory = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname.split("/")[1] + "/";
+var base_directory = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname.split("/")[0] + "/";
 
 var msg_end_marker = "+++";
 var sms_msg_format =
