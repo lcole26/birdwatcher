@@ -7,28 +7,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>machina</title>
   <link rel="stylesheet" href="../../css/style.css" />
-  <base href="../../">
+  <script src="../../js_stuff/main.js"></script>
+  <!-- <script src="../../node_modules/howler/src/howler.core.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <base href="../../">;
 </head>
 
 <body>
-  <p class="unknown_entity">do you hear the noise?</p>
+  <!-- <p class="unknown_entity">do you hear the noise?</p>
   <p class="unknown_entity">the noise we all hear?</p>
   <p class="unknown_entity">the machines are the birds.</p>
   <p class="unknown_entity">birds aren't real.</p>
   <p class="unknown_entity">none of it is.</p>
-  <p id="end" class="unknown_entity">the trees are nests. phone homes.</p>
+  <p class="unknown_entity">the trees are nests. phone homes.</p>
 
   <script>
     setTimeout(() => {
-      document.getElementById("end").innerHTML += `
-      <p class="unknown_entity">
-      <a href="./documentation/index.html">follow the birdie</a>
-      </p>`;
-    }, 16000);
+      // document.append(`
+      // <p class="unknown_entity">
+      //   <a href="../index.html">follow the birdie</a>
+      // </p>`);
+      sound.play();
+    }, 3000);
+  </script> -->
+
+  <script>
+    var sound = SetUpMsgReceivedAudio();
+    var _users = users;
+
+    postNewMessageWithHTML(_users.unknown_entity, null, 4, `do you hear the noise?`, null);
+    postNewMessageWithHTML(_users.unknown_entity, null, 10, `the noise we all hear?`, null);
+    postNewMessageWithHTML(_users.unknown_entity, null, 15, `the machines are the birds.`, sound);
+    postNewMessageWithHTML(_users.unknown_entity, null, 21, `birds aren't real.`, sound);
+    postNewMessageWithHTML(_users.unknown_entity, null, 26, `none of it is.`, null);
+    postNewMessageWithHTML(_users.unknown_entity, null, 32, `the trees are nests. phone homes.`, sound);
+    postNewMessageWithHTML(_users.unknown_entity, null, 43, `
+    <a href="./index.html">follow the birdie</a>`, sound);
   </script>
-  <!-- <p class="unknown_entity">
-    <a href="../index.html">follow the birdie</a>
-  </p> -->
+
 </body>
 
 </html>
