@@ -27,7 +27,8 @@
  */
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 var base_url = window.location.origin;
-var base_directory = window.location.pathname.split('/').find(el => el !== "");
+// var base_directory = window.location.pathname.split('/').find(el => el !== "");
+var base_directory = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname.split("/")[1] + "/";
 
 var msg_end_marker = "+++";
 var sms_msg_format =
@@ -35,7 +36,7 @@ var sms_msg_format =
 var sms_received_sound;
 const sound_urls = {
   // sms_received_sound_url: base_url + "/" + base_directory + "/media/audio/545372__stwime__up3.ogg",
-  sms_received_sound_url: "../media/audio/545372__stwime__up3.ogg",
+  sms_received_sound_url: base_directory + "media/audio/545372__stwime__up3.ogg",
 };
 
 const users = {
