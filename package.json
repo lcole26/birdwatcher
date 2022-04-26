@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@types/jquery": "^3.5.14",
-    "howler": "^2.2.3",
-    "jquery": "^3.6.0"
-  }
-}
